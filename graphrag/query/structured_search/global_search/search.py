@@ -5,6 +5,7 @@
 
 import asyncio
 import json
+import re
 import logging
 import time
 from dataclasses import dataclass
@@ -229,7 +230,18 @@ class GlobalSearch(BaseSearch):
         list[dict[str, Any]]
             A list of key points, each key point is a dictionary with "answer" and "score" keys
         """
-        parsed_elements = json.loads(search_response)["points"]
+        #print('*****************************')
+        #print(search_response)
+        #print('*************************')
+        # make sure research_response is json object
+
+        try: 
+            parsed_elements = json.loads(search_response)["points"]
+        except:
+            parsed_elements = re.search(r'\{(.*)\}', search_response, re.DOTALL).group(0)
+            parsed_elements = json.loads(parsed_elements)["points"]
+
+
         return [
             {
                 "answer": element["description"],
