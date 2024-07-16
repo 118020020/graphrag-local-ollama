@@ -87,6 +87,7 @@ Follow these steps to set up this repository and use GraphRag with local models 
     graph_rag_abnb_qa.py is a file written to implement all the questions within one specific data file (find the script under path ./graphrag-local-ollama).
 
 13. **Result for testing the 3 qa questions can be found at graph_rag_qa_result_airbnb.txt**
+
     Here shows the 3 questions:
     1). When did Airbnb go public, what was the price per share? 2). Why did Wimdu unlike Airbnb not take off? 3). Why does market fragmentation work for airline industry but could't work for Airbnb?
     Find the detailed answer in graph_rag_qa_result_airbnb.txt. The answer structre is as follows:
