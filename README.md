@@ -46,7 +46,7 @@ Follow these steps to set up this repository and use GraphRag with local models 
 
 4. **Clone the repository:**
     ```bash
-    git clone https://github.com/TheAiSingularity/graphrag-local-ollama.git](https://github.com/118020020/graphrag-local-ollama.git
+    git clone https://github.com/118020020/graphrag-local-ollama.git
     ```
 
 5. **Navigate to the repository directory:**
@@ -67,15 +67,15 @@ Follow these steps to set up this repository and use GraphRag with local models 
 8. **Edit the settings.yaml file**
    Replace the original settings.yaml file under ./ragtest by the one under graphrag-local-ollama if you want to use llama3:8b as llm and nomic_embed_text as embedding model. 
 
-10. **Find the ./ragtest/input folder, and put your sample data (you can download from kaggle in this case) in it. Notice that the data should be .txt format**
+9. **Find the ./ragtest/input folder, and put your sample data (you can download from kaggle in this case) in it. Notice that the data should be .txt format**
    The default dataset used is airbnb.txt under [Acquired Dataset for RAG Evaluation](https://www.kaggle.com/datasets/harrywang/acquired-podcast-transcripts-and-rag-evaluation/).
 
-11. **Run the indexing, which creates a graph:**
+10. **Run the indexing, which creates a graph:**
     ```bash
     python -m graphrag.index --root ./ragtest
     ```
 
-12. **Run a query: Only supports Global method or you can run query using the python file graph_rag_qa.py** 
+11. **Run a query: Only supports Global method or you can run query using the python file graph_rag_qa.py** 
     ```bash
     python -m graphrag.query --root ./ragtest --method global "When did Airbnb go public? What was the price per share?"
     ```
@@ -84,6 +84,10 @@ Follow these steps to set up this repository and use GraphRag with local models 
     python graph_rag_script_qa.py
     ```
     graph_rag_abnb_qa.py is a file written to implement all the questions within one certain data file (find the script under path ./graphrag-local-ollama).
+
+12. **Result for testing the 3 qa questions can be found at graph_rag_qa_result_airbnb.txt**
+    Here shows a summary: 
+    
     
 **Graphs can be saved which further can be used for visualization by changing the graphml to "true" in the settings.yaml :**
     
@@ -101,6 +105,7 @@ Pass the path to the .graphml file to the below line in visualize-graphml.py:
     ```bash
     python visualize-graphml.py
     ```
+
 
 
 
