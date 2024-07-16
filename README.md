@@ -69,14 +69,15 @@ Follow these steps to set up this repository and use GraphRag with local models 
    Replace the original settings.yaml file under ./ragtest by the one under graphrag-local-ollama if you want to use llama3:8b as llm and nomic_embed_text as embedding model. 
 
 10. **Find the ./ragtest/input folder, and put your sample data (you can download from kaggle in this case) in it. Notice that the data should be .txt format**
-   The default dataset used is airbnb.txt under [Acquired Dataset for RAG Evaluation](https://www.kaggle.com/datasets/harrywang/acquired-podcast-transcripts-and-rag-evaluation/).
 
-11. **Run the indexing, which creates a graph:**
+    The default dataset used is airbnb.txt in [Acquired Dataset for RAG Evaluation](https://www.kaggle.com/datasets/harrywang/acquired-podcast-transcripts-and-rag-evaluation/).
+
+12. **Run the indexing, which creates a graph:**
     ```bash
     python -m graphrag.index --root ./ragtest
     ```
 
-12. **Run a query: Only supports Global method or you can run query using the python file graph_rag_qa.py** 
+13. **Run a query: Only supports Global method or you can run query using the python file graph_rag_qa.py** 
     ```bash
     python -m graphrag.query --root ./ragtest --method global "When did Airbnb go public? What was the price per share?"
     ```
@@ -86,7 +87,7 @@ Follow these steps to set up this repository and use GraphRag with local models 
     ```
     graph_rag_abnb_qa.py is a file written to implement all the questions within one specific data file (find the script under path ./graphrag-local-ollama).
 
-13. **Result for testing the 3 qa questions can be found at graph_rag_qa_result_airbnb.txt**
+14. **Result for testing the 3 qa questions can be found at graph_rag_qa_result_airbnb.txt**
 
     Here shows the 3 questions:
     1). When did Airbnb go public, what was the price per share? 2). Why did Wimdu unlike Airbnb not take off? 3). Why does market fragmentation work for airline industry but could't work for Airbnb?
