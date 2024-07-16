@@ -1,6 +1,8 @@
 ## 🤝 Contributing
 
-**Based on the original version by TheAiSingularity, which connects Ollama and GraphRAG, this version further fixes some bugs, makes it even easier for implementation, and adds the testing for the [Acquired Dataset for RAG Evaluation](https://www.kaggle.com/datasets/harrywang/acquired-podcast-transcripts-and-rag-evaluation/)**
+**Based on the original version by TheAiSingularity, which connects Ollama and GraphRAG, this version further fixes some bugs, makes it even easier for implementation, and adds the testing for the [Acquired Dataset for RAG Evaluation](https://www.kaggle.com/datasets/harrywang/acquired-podcast-transcripts-and-rag-evaluation/)**. 
+
+**The default model used in the repo in llama3:8b and nomic-embed-text.**
 
 # 🚀 GraphRAG Local Ollama - Knowledge Graph
 
