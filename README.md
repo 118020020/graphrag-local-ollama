@@ -46,7 +46,7 @@ Follow these steps to set up this repository and use GraphRag with local models 
 
 4. **Clone the repository:**
     ```bash
-    git clone https://github.com/TheAiSingularity/graphrag-local-ollama.git](https://github.com/118020020/graphrag-local-ollama.git
+    git clone https://github.com/118020020/graphrag-local-ollama.git
     ```
 
 5. **Navigate to the repository directory:**
